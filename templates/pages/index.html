@@ -1,0 +1,323 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Showcase -->
+<section id="showcase">
+        <div class="container text-center">
+          <div class="home-search p-5">
+            <div class="overlay p-5">
+              <h1 class="display-4 mb-4">
+                Accomodation Searching For Students Just Got So Easy
+              </h1>
+              <p class="lead">Engineers! Just focus on your studies, journal and assignment completion, projects etc while we search for your ideal accommodation as per your requirements. Be it Hostels or Flats on rent, we have it all here just for you!</p>
+              <div class="search">
+                <form action="search.html">
+                  <!-- Form Row 1 -->
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">Colleges</label>
+                      <select name="Colleges" class="form-control">
+                          <option selected="true" disabled="disabled">Colleges (Mumbai and Navi Mumbai)</option>
+                          <option value="AIKTC">Anjuman-I-Islam A.R KALSEKAR POLYTECHNIC </option>
+                          <option value="BVCOENM">Bharati Vidyapeeth College of Engineering</option>
+                          <option value="DMCE">Datta Meghe College of Engineering</option>
+                          <option value="DBIT">Don Bosco Institute of Technology</option>
+                          <option value="DJSCE">Dwarkadas J. Sanghvi College of Engineering</option>
+                          <option value="FRCRCE">Fr. Conceicao Rodrigues College of Engineering</option>
+                          <option value="FCRIT">Fr. Conceicao Rodrigues Institute of Technology</option>
+                          <option value="IITB">Indian Institute of Technology Bombay</option>
+                          <option value="ICT">Institute of Chemical Technology</option>
+                          <option value="KJSCE">K.J. Somaiya College of Engineering</option>
+                          <option value="KCCEMSR">KC College of Engineering</option>
+                          <option value="KGCE">Konkan Gyanpeeth College of Engineering</option>
+                          <option value="MHSSCE">M. H. Saboo Siddik College of Engineering</option>
+                          <option value="MGMCET">Mahatma Gandhi Mission's College of Engineering and Technology</option>
+                          <option value="NMIMS">NMIMS Narsee Monjee Institute of Management Studies</option>
+                          <option value="PVPPCOE">Padmabhushan Vasantdada Patil Pratishthan's College of Engineering</option>
+                          <option value="PCE">Pillai College of Engineering</option>
+                          <option value="RGIT">Rajiv Gandhi Institute of Technology</option>
+                          <option value="RAIT">Ramrao Adik Institute of Technology</option>
+                          <option value="RIZVI">Rizvi College of Engineering</option>
+                          <option value="SCE">Saraswati college of Engineering</option>
+                          <option value="SPCE">Sardar Patel College of Engineering</option>
+                          <option value="SPIT">Sardar Patel Institute of Technology</option>
+                          <option value="SAKEC">Shah and Anchor Kutchhi Engineering College</option>
+                          <option value="SSJCE">Shivajirao S. Jondhale College of Engineering</option>
+                          <option value="SGST">SIES Graduate School of Technology</option>
+                          <option value="SSPMCE">Sindhudurg Shikshan Prasarak Mandal's College of Engineering</option>
+                          <option value="SFIT">St. Francis Institute of Technology</option>
+                          <option value="TCE">Terna Engineering College</option>
+                          <option value="TSEC">Thadomal Shahani Engineering College</option>
+                          <option value="TCET">Thakur College of Engineering and Technology</option>
+                          <option value="UMIT">Usha Mittal Institute of Technology</option>
+                          <option value="VJTI">Veermata Jijabai Technological Institute</option>
+                          <option value="VIT">Vidyalankar Institute of Technology</option>
+                          <option value="VCET">Vidyavardhini College of Engineering and Technology</option>
+                          <option value="VESIT">Vivekanand Education Society's Institute of Technology</option>
+                          <option value="WIEC">Watumull Institute of Electronics Engineering and Computer Technology</option>
+                          <option value="XIE">Xavier Institute of Engineering</option>
+                          <option value="YTIET">Yadavrao Tasgaonkar Institute of Engineering & Technology</option>
+                      </select>
+                    </div>
+    
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">City</label>
+                      <select name="City" class="form-control">
+                        <option selected="true" disabled="disabled">City (Mumbai and Navi Mumbai)</option>
+                        <option value="Airoli">Airoli</option>
+                        <option value="Andheri">Andheri</option>
+                        <option value="Antop Hill">Antop Hill</option>
+                        <option value="Bandra">Bandra</option>
+                        <option value="Bhandup">Bhandup</option>
+                        <option value="Borivali">Borivali</option>
+                        <option value="Byculla">Byculla</option>
+                        <option value="CBD Belapur">CBD Belapur</option>
+                        <option value="Chembur">Chembur</option>
+                        <option value="Colaba">Colaba</option>
+                        <option value="Dadar">Dadar</option>
+                        <option value="Dahisar">Dahisar</option>
+                        <option value="Fort">Fort</option>
+                        <option value="Ghansoli">Ghansoli</option>
+                        <option value="Ghatkopar">Ghatkopar</option>
+                        <option value="Girgaon">Girgaon</option>
+                        <option value="Goregaon">Goregaon</option>
+                        <option value="Govandi">Govandi</option>
+                        <option value="Jogeshwari">Jogeshwari</option>
+                        <option value="ME">Juhu</option>
+                        <option value="MD">Juinagar</option>
+                        <option value="Juhu">Kalbadevi</option>
+                        <option value="Kamathipura">Kamathipura</option>
+                        <option value="Kamothe">Kamothe</option>
+                        <option value="Kandivali">Kandivali</option>
+                        <option value="Kanjurmarg">Kanjurmarg</option>
+                        <option value="Khar">Khar</option>
+                        <option value="Kharghar">Kharghar</option>
+                        <option value="Kopar Khairane">Kopar Khairane</option>
+                        <option value="Kurla">Kurla</option>
+                        <option value="Malad">Malad</option>
+                        <option value="Mankhurd">Mankhurd</option>
+                        <option value="Matunga">Matunga</option>
+                        <option value="Parel">Parel</option>
+                        <option value="Mulund">Mulund</option>
+                        <option value="Nerul">Nerul</option>
+                        <option value="New Panvel">New Panvel</option>
+                        <option value="Powai">Powai</option>
+                        <option value="Rabale">Rabale</option>
+                        <option value="Sanpada">Sanpada</option>
+                        <option value="Santacruz">Santacruz</option>
+                        <option value="Tardeo">Tardeo</option>
+                        <option value="Trombay">Trombay</option>
+                        <option value="Vasai">Vasai</option>
+                        <option value="Vashi">Vashi</option>
+                        <option value="Vidyavihar">Vidyavihar</option>
+                        <option value="Vikhroli">Vikhroli</option>
+                        <option value="Vile Parle">Vile Parle</option>
+                        <option value="Virar">Virar</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Form Row 2 -->
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                      <label class="sr-only">Bedrooms</label>
+                      <select name="bedrooms" class="form-control">
+                        <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <select name="price" class="form-control" id="type">
+                        <option selected="true" disabled="disabled">Monthly rent (in ₹)</option>
+                        <option value="1000">₹1000</option>
+                        <option value="2000">₹2000</option>
+                        <option value="3000">₹3000</option>
+                        <option value="4000">₹4000</option>
+                        <option value="5000">₹5000</option>
+                        <option value="6000">₹6000</option>
+                        <option value="7000">₹7000</option>
+                        <option value="8000">₹8000</option>
+                        <option value="9000">₹9000</option>
+                        <option value="10000">₹10000</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Listings -->
+      <section id="listings" class="py-5">
+        <div class="container">
+          <h3 class="text-center mb-3">Latest Listings</h3>
+          <div class="row">
+            <!-- Listing 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card listing-preview">
+                <img class="card-img-top" src="assets/img/homes/home-1.jpg" alt="">
+                <div class="card-img-overlay">
+                  <h2>
+                    <span class="badge badge-secondary text-white">$490,000</span>
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <div class="listing-heading text-center">
+                    <h4 class="text-primary">45 Drivewood Circle</h4>
+                    <p>
+                      <i class="fas fa-map-marker text-secondary"></i> Norwood MA, 02062</p>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-th-large"></i> Sqft: 2500</div>
+                    <div class="col-6">
+                      <i class="fas fa-car"></i> Garage: 2</div>
+                  </div>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                    <div class="col-6">
+                      <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-user"></i> Kyle Brown</div>
+                  </div>
+                  <div class="row text-secondary pb-2">
+                    <div class="col-6">
+                      <i class="fas fa-clock"></i> 5 days ago</div>
+                  </div>
+                  <hr>
+                  <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Listing 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card listing-preview">
+                <img class="card-img-top" src="assets/img/homes/home-2.jpg" alt="">
+                <div class="card-img-overlay">
+                  <h2>
+                    <span class="badge badge-secondary text-white">$550,000</span>
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <div class="listing-heading text-center">
+                    <h4 class="text-primary">18 Jefferson Lane</h4>
+                    <p>
+                      <i class="fas fa-map-marker text-secondary"></i> Woburn MA, 01801</p>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                    <div class="col-6">
+                      <i class="fas fa-car"></i> Garage: 1</div>
+                  </div>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                    <div class="col-6">
+                      <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-user"></i> Mark Hudson</div>
+                  </div>
+                  <div class="row text-secondary pb-2">
+                    <div class="col-6">
+                      <i class="fas fa-clock"></i> 5 days ago</div>
+                  </div>
+                  <hr>
+                  <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Listing 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card listing-preview">
+                <img class="card-img-top" src="assets/img/homes/home-3.jpg" alt="">
+                <div class="card-img-overlay">
+                  <h2>
+                    <span class="badge badge-secondary text-white">$580,000</span>
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <div class="listing-heading text-center">
+                    <h4 class="text-primary">187 Woodrow Street</h4>
+                    <p>
+                      <i class="fas fa-map-marker text-secondary"></i> Salem MA, 01915</p>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                    <div class="col-6">
+                      <i class="fas fa-car"></i> Garage: 0</div>
+                  </div>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                    <div class="col-6">
+                      <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-user"></i> Mark Hudson</div>
+                  </div>
+                  <div class="row text-secondary pb-2">
+                    <div class="col-6">
+                      <i class="fas fa-clock"></i> 5 days ago</div>
+                  </div>
+                  <hr>
+                  <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </section>
+    
+      <section id="services" class="py-5 bg-secondary text-white">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-4">
+              <i class="fas fa-comment fa-4x mr-4"></i>
+              <hr>
+              <h3>Consulting Services</h3>
+              <p>Consult before finalizing your ideal accommodation.</p>
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-home fa-4x mr-4"></i>
+              <hr>
+              <h3>Accommodation Finder</h3>
+              <p>Find your ideal accommodation as per your needs specifically designed as per the requirements of students.</p>
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-suitcase fa-4x mr-4"></i>
+              <hr>
+              <h3>Renting & Selling</h3>
+              <p>Rent or sell your property to students with ease without any third party intruding.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %} 
