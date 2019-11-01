@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %} | About Us {% endblock %}
+
 {% block content %}
 <section id="showcase-inner" class="py-5 text-white">
         <div class="container">
           <div class="row text-center">
             <div class="col-md-12">
-              <h1 class="display-4">About BT Real Estate</h1>
-              <p class="lead">Hum tumhaari maa chodne aaye hai</p>
+              <h1 class="display-4">About accommodate.com</h1>
+              <p class="lead"></p>
             </div>
           </div>
         </div>
@@ -31,25 +33,11 @@
       <section id="about" class="py-4">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
-              <h2>We Search For The Perfect Home</h2>
-              <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
-              <img src="{% static 'img/about.jpg' %}" alt="">
-              <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-                neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-                commodi id libero eveniet harum perferendis laborum molestias quia.</p>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/img/realtors/kyle.jpg" alt="Seller of the month">
-                <div class="card-body">
-                  <h5 class="card-title">Seller Of The Month</h5>
-                  <h6 class="text-secondary">Kyle Brown</h6>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
-                    content.
-                  </p>
-                </div>
-              </div>
+            <div class="col-md-12">
+              <h2>We Search For The Perfect Accommodation</h2>
+              <p class="lead">We provide the best possible accommodation for students who stay far away from their homes and attend colleges in Mumbai and Navi mumbai regions.</p>
+              <h2>Our Mission</h2>
+              <p class="mt-4">To be number one choice for the engineering students in Mumbai to find their ideal accommodation near by theri respective educational institute. And also to be the number one choice for people or hostel owners nearby educational institutes trying to rent their properties to students </p>
             </div>
           </div>
         </div>
@@ -58,48 +46,56 @@
       <!-- Work -->
       <section id="work" class="bg-dark text-white text-center">
         <h2 class="display-4">We Work For You</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+        <h5>We feature your listings for you. Just mail us the name, address, details of the property like number of bedrooms and bathrooms, some description,seller name, seller contact, monthly rent and some pictures and we will list your property within 24 hrs for the students to select it</h5>
         <hr>
-        <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+        <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
       </section>
     
       <!-- Team -->
       <section id="team" class="py-5">
         <div class="container">
-          <h2 class="text-center">Our Team</h2>
+          <h2 class="text-center">Feature Your Own Property For Students</h2>
           <div class="row text-center">
-            <div class="col-md-4">
-              <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-              <h4>Kyle Brown</h4>
+            <div class="col-md-3">
+              <h4>For Hostel Listings</h4>
+              <h6>Siddhesh Unhavane</h6>
               <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+                <i class="text-success mb-3"></i>Contact Us</p>
               <hr>
               <p>
-                <i class="fas fa-phone"></i> (555)-555-5555</p>
+                <i class="fas fa-phone"></i>7738447337</p>
               <p>
-                <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
+                <i class="fas fa-envelope-open"></i>siddhesh.esskay.92@gmail.com</p>
             </div>
-    
-            <div class="col-md-4">
-              <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-              <h4>Mark Hudson</h4>
-              <p class="text-success">Realtor</p>
+            <div class="col-md-3">
+              <h4>For Renting Listings</h4>
+              <h6>Gaurav Singh</h6>
+              <p class="text-success">Contact Us</p>
               <hr>
               <p>
-                <i class="fas fa-phone"></i> (444)-444-4444</p>
+                <i class="fas fa-phone"></i>8976463357</p>
               <p>
-                <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
+                <i class="fas fa-envelope-open"></i>gaurav36singh@gmail.com</p>
             </div>
-    
-            <div class="col-md-4">
-              <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-              <h4>Jenny Johnson</h4>
-              <p class="text-success">Realtor</p>
+            <div class="col-md-3">
+              <h4>#kat gaya</h4>
+              <h6>Aadit Thanekar</h6>
+              <p class="text-success">Contact Us</p>
               <hr>
               <p>
-                <i class="fas fa-phone"></i> (333)-333-3333</p>
+                <i class="fas fa-phone"></i>8698101739</p>
               <p>
-                <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
+                <i class="fas fa-envelope-open"></i>aadit.thanekar.07@gmail.com</p>
+            </div>
+            <div class="col-md-3">
+              <h4>For further Queries</h4>
+              <h6>Yadnesh Chikhale</h6>
+              <p class="text-success">Contact Us</p>
+              <hr>
+              <p>
+                <i class="fas fa-phone"></i>8419937392</p>
+              <p>
+                <i class="fas fa-envelope-open"></i>yadnesh1806@gmail.com</p>
             </div>
           </div>
         </div>

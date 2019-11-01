@@ -1,1 +1,180 @@
-<h1>Search</h1>
+{% extends 'base.html' %}
+
+{% load humanize %}
+
+{% block title %} | Search Results {% endblock %}
+
+{% block content %}
+<section id="showcase-inner" class="showcase-search text-white py-5">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-12">
+              <form action="{% url 'search' %}">
+                <!-- Form Row 1 -->
+                <div class="form-row">    
+                  <div class="col-md-12 mb-3">
+                    <label class="sr-only">State</label>
+                    <select name="city" class="form-control">
+                      <option selected="true" disabled="disabled">Region (Mumbai and Navi Mumbai)</option>
+                      <option value="Airoli">Airoli</option>
+                      <option value="Andheri">Andheri</option>
+                      <option value="Antop Hill">Antop Hill</option>
+                      <option value="Bandra">Bandra</option>
+                      <option value="Bhandup">Bhandup</option>
+                      <option value="Borivali">Borivali</option>
+                      <option value="Byculla">Byculla</option>
+                      <option value="CBD Belapur">CBD Belapur</option>
+                      <option value="Chembur">Chembur</option>
+                      <option value="Colaba">Colaba</option>
+                      <option value="Dadar">Dadar</option>
+                      <option value="Dahisar">Dahisar</option>
+                      <option value="Fort">Fort</option>
+                      <option value="Ghansoli">Ghansoli</option>
+                      <option value="Ghatkopar">Ghatkopar</option>
+                      <option value="Girgaon">Girgaon</option>
+                      <option value="Goregaon">Goregaon</option>
+                      <option value="Govandi">Govandi</option>
+                      <option value="Jogeshwari">Jogeshwari</option>
+                      <option value="Juhu">Juhu</option>
+                      <option value="juinagar">Juinagar</option>
+                      <option value="Juhu">Kalbadevi</option>
+                      <option value="Kamathipura">Kamathipura</option>
+                      <option value="Kamothe">Kamothe</option>
+                      <option value="Kandivali">Kandivali</option>
+                      <option value="Kanjurmarg">Kanjurmarg</option>
+                      <option value="Khar">Khar</option>
+                      <option value="Kharghar">Kharghar</option>
+                      <option value="Kopar Khairane">Kopar Khairane</option>
+                      <option value="Kurla">Kurla</option>
+                      <option value="Malad">Malad</option>
+                      <option value="Mankhurd">Mankhurd</option>
+                      <option value="Matunga">Matunga</option>
+                      <option value="Parel">Parel</option>
+                      <option value="Mulund">Mulund</option>
+                      <option value="Nerul">Nerul</option>
+                      <option value="New Panvel">New Panvel</option>
+                      <option value="Powai">Powai</option>
+                      <option value="Rabale">Rabale</option>
+                      <option value="Sanpada">Sanpada</option>
+                      <option value="Santacruz">Santacruz</option>
+                      <option value="Tardeo">Tardeo</option>
+                      <option value="Trombay">Trombay</option>
+                      <option value="Vasai">Vasai</option>
+                      <option value="Vashi">Vashi</option>
+                      <option value="Vidyavihar">Vidyavihar</option>
+                      <option value="Vikhroli">Vikhroli</option>
+                      <option value="Vile Parle">Vile Parle</option>
+                      <option value="Virar">Virar</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Form Row 2 -->
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label class="sr-only">Bedrooms</label>
+                    <select name="bedrooms" class="form-control">
+                      <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <select name="price" class="form-control">
+                      <option selected="true" disabled="disabled">Monthly rent (in ₹)</option>
+                      <option value="1000">₹1000</option>
+                        <option value="2000">₹2000</option>
+                        <option value="3000">₹3000</option>
+                        <option value="4000">₹4000</option>
+                        <option value="5000">₹5000</option>
+                        <option value="6000">₹6000</option>
+                        <option value="7000">₹7000</option>
+                        <option value="8000">₹8000</option>
+                        <option value="9000">₹9000</option>
+                        <option value="10000">₹10000</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Breadcrumb -->
+      <section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">
+                  <i class="fas fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="listings.html">Browse Listings</a>
+              </li>
+              <li class="breadcrumb-item active"> Search Results</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+    
+      <!-- Listings -->
+      <section id="listings" class="py-4">
+        <div class="container">
+          <div class="row">
+            {% if listings %}
+              {% for listing in listings %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card listing-preview">
+                    <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
+                    <div class="card-img-overlay">
+                      <h2>
+                        <span class="badge badge-secondary text-white">₹{{ listing.price | intcomma }}</span>
+                      </h2>
+                    </div>
+                    <div class="card-body">
+                      <div class="listing-heading text-center">
+                        <h4 class="text-primary">{{ listing.name }}</h4>
+                        <p>
+                          <i class="fas fa-map-marker text-secondary"></i>{{ listing.city }}, {{ listing.state }}, {{ listing.zipcode }}</p>
+                      </div>
+                      <hr>
+                      <div class="row py-2 text-secondary">
+                        <div class="col-6">
+                          <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
+                        <div class="col-6">
+                          <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
+                      </div>
+                      <hr>
+                      <div class="row py-2 text-secondary">
+                        <div class="col-12">
+                          <i class="fas fa-user"></i>{{ listing.realtor }}</div>
+                      </div>
+                      <div class="row text-secondary pb-2">
+                        <div class="col-6">
+                          <i class="fas fa-clock"></i>{{ listing.list_date | timesince }}</div>
+                      </div>
+                      <hr>
+                      <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="col-md-12">
+                <p>No Listings Available</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+      {% endblock %}
